@@ -1,0 +1,10 @@
+{
+  "APP_NAMES": ["Safari"],
+  "DEBUG": false,
+  "SHOW_CONTEXT_ON_SELECTION": true,
+  "DEFAULT_TARGET_LANG": "en",
+  "DEFAULT_SOURCE_LANG": "auto",
+  "POPUP_AUTO_HIDE_DELAY": 15,
+  "HOTKEY_TRANSLATE": [["cmd", "shift"], "t"],
+  "HOTKEY_GLOBAL": [["cmd", "shift"], "g"]
+}

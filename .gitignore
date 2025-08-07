@@ -1,0 +1,9 @@
+# Local config files
+config.json
+*.local.json
+
+# macOS
+.DS_Store
+
+# Debug logs
+*.log
