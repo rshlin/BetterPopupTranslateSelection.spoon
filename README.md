@@ -2,6 +2,8 @@
 
 A Hammerspoon Spoon for Chrome-style popup translation with context menu on text selection.
 
+![Usage Demo](assets/demo.gif)
+
 ## Features
 - Context menu on text selection
 - Chrome-style minimalistic popup

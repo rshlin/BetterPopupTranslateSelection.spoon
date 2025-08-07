@@ -7,3 +7,7 @@ config.json
 
 # Debug logs
 *.log
+
+# Keep assets directory but ignore large files if needed
+# assets/*.mp4
+# assets/*.mov
