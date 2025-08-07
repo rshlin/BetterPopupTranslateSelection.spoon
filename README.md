@@ -13,11 +13,15 @@ A Hammerspoon Spoon for Chrome-style popup translation with context menu on text
 
 1. Clone into your Spoons directory:
 ```bash
-cd ~/.hammerspoon/Spoons
-git clone <repo-url> BetterPopupTranslateSelection.spoon
+git clone https://github.com/rshlin/BetterPopupTranslateSelection.spoon.git ~/.hammerspoon/Spoons/BetterPopupTranslateSelection.spoon
 ```
 
-2. Configure and load in `~/.hammerspoon/init.lua`:
+2. Remove git tracking (optional, for local customization):
+```bash
+rm -rf ~/.hammerspoon/Spoons/BetterPopupTranslateSelection.spoon/.git
+```
+
+3. Configure and load in `~/.hammerspoon/init.lua`:
 ```lua
 local translator = hs.loadSpoon("BetterPopupTranslateSelection")
 translator:init():start()
@@ -76,6 +80,22 @@ translator:configure({
 ## Example Configuration
 
 See `config.example.json` for Safari configuration example.
+
+## Uninstall
+
+1. Remove the spoon directory:
+```bash
+rm -rf ~/.hammerspoon/Spoons/BetterPopupTranslateSelection.spoon
+```
+
+2. Remove JSON config (if created):
+```bash
+rm -rf ~/.config/hammerspoon-bpts
+```
+
+3. Remove or comment out the spoon configuration from `~/.hammerspoon/init.lua`
+
+4. Reload Hammerspoon (Cmd+Ctrl+R)
 
 ## License
 
