@@ -225,8 +225,19 @@ function obj:init()
                         translateSelection(config.DEFAULT_TARGET_LANG, config.DEFAULT_SOURCE_LANG, nil, false)
                     end
                 end)
-            elseif obj.clickCount > 2 then
+            elseif obj.clickCount >= 3 then
+                -- Handle triple-click (paragraph selection)
                 obj.clickCount = 0
+                if obj.clickTimer then obj.clickTimer:stop(); obj.clickTimer = nil end
+                
+                hs.timer.doAfter(config.SELECTION_DELAY, function()
+                    config.log("Processing triple-click selection")
+                    if config.SHOW_CONTEXT_ON_SELECTION then
+                        showSelectionContextMenu()
+                    else
+                        translateSelection(config.DEFAULT_TARGET_LANG, config.DEFAULT_SOURCE_LANG, nil, false)
+                    end
+                end)
             end
         end
         
